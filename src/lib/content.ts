@@ -1,100 +1,120 @@
 export const company = {
   name: "Lotis",
-  tagline: "Real-world asset tokenization for property, gold, silver, and titled lots.",
-  email: "hello@lotis.gold",
+  tagline: "A software development company. Flagship project: real-world asset tokenization.",
+  email: "hello@lotis.dev",
 };
 
-export const projects = [
+export const services = [
+  {
+    slug: "product-software",
+    title: "Product software",
+    kicker: "What we are",
+    summary:
+      "Web products, internal tools, and customer-facing apps. TypeScript, APIs, and the operational software companies actually run.",
+    detail:
+      "Lotis is a software shop first. We design, build, and ship systems with clear ownership, tests, and a path to production. RWA work sits on this same bench.",
+  },
+  {
+    slug: "protocol-engineering",
+    title: "Protocol and register software",
+    kicker: "What we are",
+    summary:
+      "On-chain and off-chain registers, restricted transfers, and the glue between legal files and running code.",
+    detail:
+      "When the product is a register, we treat it as software: schemas, permissions, audit trails, and interfaces a non-crypto team can still operate.",
+  },
+] as const;
+
+export const rwaTracks = [
   {
     slug: "property",
     title: "Property",
-    kicker: "Title and location",
+    kicker: "RWA project",
     summary:
-      "Issue units against deeds, leaseholds, and fractional interests. The county record stays the source of title. The token is the transferable lot.",
+      "Software that issues units against deeds, leaseholds, and fractional interests. The official record stays the source of title.",
     detail:
-      "We map each issuance to a legal description, a jurisdiction, and a holder register. Transfers follow the same restrictions a title desk already understands: accredited books, lockups, and documented exceptions.",
+      "Each issuance maps to a legal description, a jurisdiction, and a holder register. Transfers follow restrictions a title desk already understands.",
   },
   {
     slug: "gold",
     title: "Allocated gold",
-    kicker: "Vaulted metal",
+    kicker: "RWA project",
     summary:
-      "Serial-numbered gold lots, allocated in custody, issued as restricted units. Not a pooled promise. A bar list you can audit.",
+      "Software for serial-numbered gold lots in custody. A bar list you can audit, not a pooled promise.",
     detail:
-      "Each gold lot carries assay, vault, and serial data. Units cannot move to a wallet that is not on the register. Redemptions point back to the same allocated metal.",
+      "Assay, vault, and serial data sit on the lot. Units cannot move to a wallet that is not on the register.",
   },
   {
     slug: "silver",
     title: "Allocated silver",
-    kicker: "Vaulted metal",
-    summary:
-      "The same register used for gold, applied to silver. Allocated bars, not unallocated claims.",
+    kicker: "RWA project",
+    summary: "The same register used for gold, applied to silver. Allocated bars, not unallocated claims.",
     detail:
-      "Silver issuances use the same lot model: custody confirmation, serials, and a restricted holder book. Useful for inventory financing and allocated-metal funds.",
+      "Custody confirmation, serials, and a restricted holder book. Built as software, not as a metal brand.",
   },
   {
     slug: "credit-funds",
     title: "Credit and funds",
-    kicker: "Notes and vehicles",
+    kicker: "RWA project",
     summary:
-      "Tokenize fund interests, notes, and receivables when there is a true sale, a servicer, and a register of holders.",
+      "Fund interests, notes, and receivables when there is a true sale, a servicer, and a register of holders.",
     detail:
-      "We do not wrap a spreadsheet and call it an RWA. The originator, the custodian, and the transfer book have to exist before a unit is issued.",
+      "The originator, the custodian, and the transfer book have to exist before a unit is issued. We write the software around that file.",
   },
 ] as const;
 
 export const locations = [
   {
     region: "United States",
-    focus: "Property, funds, private credit",
-    note: "Title, Reg D books, and onshore vehicles. Closest analog to a Propy-style closing desk, built as software rather than an escrow brand.",
+    focus: "RWA: property, funds, private credit",
+    note: "Title, onshore vehicles, and software that talks to how US closings actually work.",
   },
   {
     region: "United Kingdom",
-    focus: "Property and funds",
-    note: "Land Registry-backed interests, unit trusts, and sterling metal accounts.",
+    focus: "RWA: property and funds",
+    note: "Land Registry-backed interests and sterling accounts, with software on top of the existing file.",
   },
   {
     region: "Switzerland",
-    focus: "Allocated gold and silver",
+    focus: "RWA: allocated gold and silver",
     note: "Vaulted bullion lots. Serials, allocation letters, and redemption against the same bars.",
   },
   {
     region: "Singapore",
-    focus: "Funds and metals",
-    note: "Fund vehicles and regional custody for allocated metal and cross-border registers.",
+    focus: "RWA: funds and metals",
+    note: "Fund vehicles and regional custody. Software for cross-border registers.",
   },
   {
     region: "United Arab Emirates",
-    focus: "Property and metals",
-    note: "Free-zone vehicles, titled real estate, and vaulted metal used as the underlying lot.",
+    focus: "RWA: property and metals",
+    note: "Free-zone vehicles, titled real estate, and vaulted metal as the underlying lot.",
   },
   {
     region: "European Union",
-    focus: "Funds and notes",
-    note: "Transfer-restricted fund units and notes where the register, not the ticker, is the product.",
+    focus: "RWA: funds and notes",
+    note: "Transfer-restricted fund units where the register, not the ticker, is the product.",
   },
 ] as const;
 
 export const steps = [
   {
     n: "01",
-    title: "Diligence the lot",
-    body: "Title, assay, custody, or true sale. If the underlying file is weak, we do not issue.",
+    title: "Scope the system",
+    body: "What has to exist in software, and what must stay in the legal or custody file. We do not blur those.",
   },
   {
     n: "02",
-    title: "Place the asset",
-    body: "Custodian, vault, or official record. The legal lot is held before any unit exists.",
+    title: "Build in production shape",
+    body: "Interfaces, data model, permissions, and the unglamorous ops path. Same standard for client software and for RWA.",
   },
   {
     n: "03",
-    title: "Issue the unit",
-    body: "A restricted on-chain lot that points at that file. Holders are named. Transfers are gated.",
+    title: "Connect the real file",
+    body: "On the RWA project: title, assay, vault, or true sale. If that file is weak, we do not issue a unit.",
   },
   {
     n: "04",
-    title: "Service the register",
-    body: "Reporting, NAV or inventory, redemptions, and corporate actions against the same books.",
+    title: "Ship and operate",
+    body: "Deploy, report, restrict transfers, and keep the books in sync. Software that a team can still run next year.",
   },
 ] as const;

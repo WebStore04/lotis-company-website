@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: "%s · Lotis",
   },
   description:
-    "Lotis tokenizes real-world assets. Property, allocated gold and silver, and other titled lots, issued as restricted on-chain units.",
+    "Lotis is a software development company. Flagship project: real-world asset tokenization for property, gold, and silver.",
   icons: {
     icon: "/lotis-logo.png",
     apple: "/lotis-logo.png",

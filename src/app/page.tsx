@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { locations, projects, steps } from "@/lib/content";
+import { locations, rwaTracks, services, steps } from "@/lib/content";
 
 export default function Home() {
   return (
@@ -12,35 +12,35 @@ export default function Home() {
           alt=""
           fill
           priority
-          className="object-cover object-center opacity-40"
+          className="object-cover object-center opacity-45"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#07080A]/30 via-[#07080A]/55 to-[#07080A]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#07080A]/25 via-[#07080A]/60 to-[#07080A]" />
         <div className="relative mx-auto max-w-6xl px-5 py-24 sm:py-32">
           <p className="text-xs tracking-[0.28em] text-[#c4a05a] uppercase">
-            Real-world asset tokenization
+            Software development company
           </p>
           <h1 className="mt-5 max-w-3xl text-4xl leading-[1.1] font-medium tracking-tight text-zinc-50 sm:text-6xl">
-            Issue the lot.
+            We write software.
             <br />
-            Keep the asset real.
+            RWA is the main project.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-8 text-zinc-300">
-            Lotis is software for titled, vaulted, and allocated assets. Property first. Gold and
-            silver as part of the same register. Not a ticker looking for an underlying.
+            Lotis is a software shop. We build products, APIs, and registers. Our flagship project
+            is real-world asset tokenization: property, allocated gold and silver, and titled lots.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button
               render={<Link href="/projects" />}
               className="h-11 rounded-full bg-[#c4a05a] px-6 text-[#1a1408] hover:bg-[#d4b36a]"
             >
-              View projects
+              View work
             </Button>
             <Button
               variant="outline"
-              render={<Link href="/locations" />}
+              render={<Link href="/contact" />}
               className="h-11 rounded-full border-white/20 bg-transparent px-6 text-zinc-100 hover:bg-white/5"
             >
-              Browse locations
+              Start a project
             </Button>
           </div>
         </div>
@@ -49,46 +49,39 @@ export default function Home() {
       <section className="mx-auto grid max-w-6xl gap-10 px-5 py-20 lg:grid-cols-2">
         <div>
           <h2 className="text-2xl tracking-tight text-zinc-50 sm:text-3xl">
-            We are not a memecoin factory.
+            Not an RWA company that also codes.
           </h2>
-          <p className="mt-4 text-zinc-400 leading-7">
-            The work is closer to a title desk and a vault than to a token launch. If the deed,
-            the bar list, or the true-sale file cannot be shown, there is no lot to issue.
+          <p className="mt-4 leading-7 text-zinc-400">
+            The company is software development. The RWA register is what we are shipping first,
+            the way a protocol team ships one network and still remains a software firm.
           </p>
         </div>
-        <div className="space-y-4 text-zinc-400 leading-7">
+        <div className="space-y-4 leading-7 text-zinc-400">
           <p>
-            Each unit on Lotis points at a real-world lot: a parcel, an allocated gold or silver
-            position, a fund interest, or a receivable that has already moved.
+            Client product work and the RWA project share the same bench: TypeScript, APIs,
+            permissions, and code that has to keep running after launch.
           </p>
           <p>
-            Holders are named. Transfers are restricted. The on-chain record is the transfer book,
-            not a substitute for custody or title.
+            We are not a memecoin factory. If a project needs a ticker more than it needs
+            software, it is the wrong fit.
           </p>
         </div>
       </section>
 
       <section className="border-y border-white/10 bg-white/[0.02]">
         <div className="mx-auto max-w-6xl px-5 py-20">
-          <div className="flex items-end justify-between gap-4">
-            <div>
-              <p className="text-xs tracking-[0.28em] text-[#c4a05a] uppercase">Projects</p>
-              <h2 className="mt-3 text-2xl text-zinc-50 sm:text-3xl">What we tokenize</h2>
-            </div>
-            <Link href="/projects" className="hidden text-sm text-zinc-400 hover:text-zinc-100 sm:block">
-              All projects
-            </Link>
-          </div>
+          <p className="text-xs tracking-[0.28em] text-[#c4a05a] uppercase">What we are</p>
+          <h2 className="mt-3 text-2xl text-zinc-50 sm:text-3xl">Software we build</h2>
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {projects.map((project) => (
+            {services.map((service) => (
               <Link
-                key={project.slug}
-                href={`/projects#${project.slug}`}
+                key={service.slug}
+                href={`/projects#${service.slug}`}
                 className="rounded-2xl border border-white/10 bg-[#0c0d10] p-6 transition-colors hover:border-[#c4a05a]/40"
               >
-                <p className="text-xs tracking-[0.2em] text-zinc-500 uppercase">{project.kicker}</p>
-                <h3 className="mt-3 text-xl text-zinc-50">{project.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-zinc-400">{project.summary}</p>
+                <p className="text-xs tracking-[0.2em] text-zinc-500 uppercase">{service.kicker}</p>
+                <h3 className="mt-3 text-xl text-zinc-50">{service.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-zinc-400">{service.summary}</p>
               </Link>
             ))}
           </div>
@@ -96,29 +89,60 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-6xl px-5 py-20">
-        <p className="text-xs tracking-[0.28em] text-[#c4a05a] uppercase">Approach</p>
-        <h2 className="mt-3 text-2xl text-zinc-50 sm:text-3xl">Four steps, one register</h2>
-        <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {steps.map((step) => (
-            <div key={step.n}>
-              <p className="font-mono text-sm text-[#c4a05a]">{step.n}</p>
-              <h3 className="mt-2 text-lg text-zinc-100">{step.title}</h3>
-              <p className="mt-2 text-sm leading-6 text-zinc-400">{step.body}</p>
-            </div>
+        <div className="flex items-end justify-between gap-4">
+          <div>
+            <p className="text-xs tracking-[0.28em] text-[#c4a05a] uppercase">Flagship project</p>
+            <h2 className="mt-3 text-2xl text-zinc-50 sm:text-3xl">Real-world asset tokenization</h2>
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-zinc-400">
+              The main project. Property, gold, silver, and financial lots on one software
+              register. Gold and silver are workstreams, not the company name.
+            </p>
+          </div>
+          <Link href="/projects#rwa" className="hidden text-sm text-zinc-400 hover:text-zinc-100 sm:block">
+            Project detail
+          </Link>
+        </div>
+        <div className="mt-10 grid gap-4 sm:grid-cols-2">
+          {rwaTracks.map((track) => (
+            <Link
+              key={track.slug}
+              href={`/projects#${track.slug}`}
+              className="rounded-2xl border border-white/10 bg-[#0c0d10] p-6 transition-colors hover:border-[#c4a05a]/40"
+            >
+              <p className="text-xs tracking-[0.2em] text-zinc-500 uppercase">{track.kicker}</p>
+              <h3 className="mt-3 text-xl text-zinc-50">{track.title}</h3>
+              <p className="mt-3 text-sm leading-6 text-zinc-400">{track.summary}</p>
+            </Link>
           ))}
         </div>
-        <Link href="/approach" className="mt-8 inline-block text-sm text-zinc-400 hover:text-zinc-100">
-          Read the approach
-        </Link>
       </section>
 
-      <section className="border-t border-white/10">
+      <section className="border-y border-white/10 bg-white/[0.02]">
+        <div className="mx-auto max-w-6xl px-5 py-20">
+          <p className="text-xs tracking-[0.28em] text-[#c4a05a] uppercase">Approach</p>
+          <h2 className="mt-3 text-2xl text-zinc-50 sm:text-3xl">How a Lotis project runs</h2>
+          <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {steps.map((step) => (
+              <div key={step.n}>
+                <p className="font-mono text-sm text-[#c4a05a]">{step.n}</p>
+                <h3 className="mt-2 text-lg text-zinc-100">{step.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-zinc-400">{step.body}</p>
+              </div>
+            ))}
+          </div>
+          <Link href="/approach" className="mt-8 inline-block text-sm text-zinc-400 hover:text-zinc-100">
+            Read the approach
+          </Link>
+        </div>
+      </section>
+
+      <section>
         <div className="mx-auto max-w-6xl px-5 py-20">
           <div className="flex items-end justify-between gap-4">
             <div>
-              <p className="text-xs tracking-[0.28em] text-[#c4a05a] uppercase">Locations</p>
+              <p className="text-xs tracking-[0.28em] text-[#c4a05a] uppercase">RWA locations</p>
               <h2 className="mt-3 max-w-lg text-2xl text-zinc-50 sm:text-3xl">
-                Where the underlying can sit
+                Where the flagship project can sit
               </h2>
             </div>
             <Link href="/locations" className="hidden text-sm text-zinc-400 hover:text-zinc-100 sm:block">

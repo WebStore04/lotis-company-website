@@ -7,8 +7,7 @@ export function SiteFooter() {
         <div>
           <p className="text-[13px] tracking-[0.22em] text-zinc-200">LOTIS</p>
           <p className="mt-2 max-w-sm text-sm text-zinc-500">
-            Real-world asset tokenization. Property, allocated gold and silver, and other titled
-            lots.
+            Software development company. Flagship project: real-world asset tokenization.
           </p>
         </div>
         <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-zinc-500">
@@ -24,8 +23,8 @@ export function SiteFooter() {
           <Link href="/contact" className="hover:text-zinc-200">
             Contact
           </Link>
-          <a href="mailto:hello@lotis.gold" className="hover:text-zinc-200">
-            hello@lotis.gold
+          <a href="mailto:hello@lotis.dev" className="hover:text-zinc-200">
+            hello@lotis.dev
           </a>
         </div>
       </div>

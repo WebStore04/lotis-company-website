@@ -10,7 +10,7 @@ type Status = "idle" | "submitting" | "success" | "error";
 export function InquiryForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
-  const [invalid, setInvalid] = useState({ name: false, email: false, asset: false });
+  const [invalid, setInvalid] = useState({ name: false, email: false, topic: false });
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -21,20 +21,20 @@ export function InquiryForm() {
     const payload = {
       name: String(data.get("name") ?? "").trim(),
       email: String(data.get("email") ?? "").trim(),
-      asset: String(data.get("asset") ?? "").trim(),
+      topic: String(data.get("topic") ?? "").trim(),
       details: String(data.get("details") ?? "").trim(),
     };
 
     const nextInvalid = {
       name: payload.name.length === 0,
       email: payload.email.length === 0,
-      asset: payload.asset.length === 0,
+      topic: payload.topic.length === 0,
     };
     setInvalid(nextInvalid);
 
-    if (nextInvalid.name || nextInvalid.email || nextInvalid.asset) {
+    if (nextInvalid.name || nextInvalid.email || nextInvalid.topic) {
       setStatus("error");
-      setMessage("Name, email, and asset class are required.");
+      setMessage("Name, email, and project type are required.");
       return;
     }
 
@@ -54,12 +54,12 @@ export function InquiryForm() {
         return;
       }
       form.reset();
-      setInvalid({ name: false, email: false, asset: false });
+      setInvalid({ name: false, email: false, topic: false });
       setStatus("success");
-      setMessage("Received. We will reply to that email with next steps for the lot.");
+      setMessage("Received. We will reply about the software work or the RWA project.");
     } catch {
       setStatus("error");
-      setMessage("Network error. Email hello@lotis.gold instead.");
+      setMessage("Network error. Email hello@lotis.dev instead.");
     }
   }
 
@@ -84,31 +84,31 @@ export function InquiryForm() {
             autoComplete="email"
             aria-invalid={invalid.email || undefined}
             className="h-11 border-white/15 bg-white/5 text-zinc-100"
-            placeholder="jane@originator.com"
+            placeholder="jane@company.com"
           />
         </label>
       </div>
       <label className="block space-y-1.5 text-sm text-zinc-400">
-        Asset class
+        Project type
         <Input
-          name="asset"
-          aria-invalid={invalid.asset || undefined}
+          name="topic"
+          aria-invalid={invalid.topic || undefined}
           className="h-11 border-white/15 bg-white/5 text-zinc-100"
-          placeholder="Property, gold, silver, fund, other"
+          placeholder="Product software, RWA, protocol, other"
         />
       </label>
       <label className="block space-y-1.5 text-sm text-zinc-400">
-        What is the lot?
+        What needs to exist when we are done?
         <Textarea
           name="details"
           className="min-h-32 border-white/15 bg-white/5 text-zinc-100"
-          placeholder="Jurisdiction, custody or title status, target raise or inventory."
+          placeholder="Product, jurisdiction, custody or title status, or the system you need built."
         />
       </label>
 
       {status === "idle" ? (
         <p className="text-sm text-zinc-500">
-          No spam, no token pitch. Tell us the underlying asset and where it sits.
+          Software build or the RWA register. No token pitch.
         </p>
       ) : null}
       {status === "error" ? (

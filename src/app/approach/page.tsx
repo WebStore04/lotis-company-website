@@ -4,7 +4,7 @@ import { steps } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Approach",
-  description: "How Lotis issues real-world asset lots without replacing title or custody.",
+  description: "How Lotis builds software, including the flagship RWA project.",
 };
 
 export default function ApproachPage() {
@@ -12,12 +12,11 @@ export default function ApproachPage() {
     <div className="mx-auto max-w-3xl px-5 py-16 sm:py-24">
       <p className="text-xs tracking-[0.28em] text-[#c4a05a] uppercase">Approach</p>
       <h1 className="mt-4 text-4xl tracking-tight text-zinc-50 sm:text-5xl">
-        The chain is the transfer book.
+        Software with a real file behind it.
       </h1>
       <p className="mt-6 text-lg leading-8 text-zinc-400">
-        Lotis is for teams that already have an asset, a vault, a title file, or a true sale, and
-        need a restricted on-chain unit that does not lie about it. We build the issuance software.
-        We do not replace the custodian or the recorder.
+        Lotis is a development company. We ship systems. On the RWA project, the chain is the
+        transfer book. It does not replace the custodian or the recorder.
       </p>
 
       <ol className="mt-14 space-y-10">
@@ -32,7 +31,7 @@ export default function ApproachPage() {
 
       <p className="mt-14 leading-7 text-zinc-500">
         If you want a permissionless coin with a gold photo on the website, this is the wrong
-        shop. If you want a lot that still exists when a lawyer asks for the file,{" "}
+        shop. If you need software, or a lot that still exists when a lawyer asks for the file,{" "}
         <Link href="/contact" className="text-[#c4a05a] hover:underline">
           start here
         </Link>

@@ -46,7 +46,7 @@ export function SiteHeader() {
             render={<Link href="/contact" />}
             className="h-9 rounded-full bg-[#c4a05a] px-4 text-sm text-[#1a1408] hover:bg-[#d4b36a]"
           >
-            Start a lot
+            Start a project
           </Button>
         </nav>
 
@@ -78,7 +78,7 @@ export function SiteHeader() {
               className="pt-2 text-sm text-[#c4a05a]"
               onClick={() => setOpen(false)}
             >
-              Start a lot
+              Start a project
             </Link>
           </nav>
         </div>

@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 type Inquiry = {
   name?: string;
   email?: string;
+  topic?: string;
   asset?: string;
   details?: string;
 };
@@ -17,12 +18,12 @@ export async function POST(request: Request) {
 
   const name = body.name?.trim() ?? "";
   const email = body.email?.trim() ?? "";
-  const asset = body.asset?.trim() ?? "";
+  const topic = (body.topic ?? body.asset)?.trim() ?? "";
   const details = body.details?.trim() ?? "";
 
-  if (!name || !email || !asset) {
+  if (!name || !email || !topic) {
     return NextResponse.json(
-      { ok: false, error: "Name, email, and asset class are required." },
+      { ok: false, error: "Name, email, and project type are required." },
       { status: 400 }
     );
   }
@@ -31,7 +32,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "That email does not look valid." }, { status: 400 });
   }
 
-  console.info("[lotis inquiry]", { name, email, asset, details: details.slice(0, 500) });
+  console.info("[lotis inquiry]", { name, email, topic, details: details.slice(0, 500) });
 
   return NextResponse.json({ ok: true });
 }
