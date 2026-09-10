@@ -20,14 +20,13 @@ export default function Home() {
             Software development company
           </p>
           <h1 className="mt-5 max-w-3xl text-4xl leading-[1.1] font-medium tracking-tight text-zinc-50 sm:text-6xl">
-            Bringing real-world assets
+            Production software
             <br />
-            into the modern era.
+            for the modern internet.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-8 text-zinc-300">
-            Lotis is a software development company. We build products, APIs, and registers. Our
-            flagship project is real-world asset tokenization for property, allocated gold and
-            silver, and titled lots.
+            Lotis is a software development company. We build products, APIs, and on-chain
+            systems. Real-world asset tokenization is our flagship project, not the whole firm.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button
@@ -50,21 +49,21 @@ export default function Home() {
       <section className="mx-auto grid max-w-6xl gap-10 px-5 py-20 lg:grid-cols-2">
         <div>
           <h2 className="text-2xl tracking-tight text-zinc-50 sm:text-3xl">
-            Software that keeps the asset real.
+            Software that ships, then stays up.
           </h2>
           <p className="mt-4 leading-7 text-zinc-400">
-            We write production systems: products, APIs, and the register behind tokenization.
-            Real-world asset software is the project we are shipping first.
+            We write production systems: web products, APIs, protocol work, and registers. Client
+            software and the RWA project share the same bench.
           </p>
         </div>
         <div className="space-y-4 leading-7 text-zinc-400">
           <p>
-            Property, allocated gold and silver, and financial lots share one model: a legal file,
-            a restricted holder book, and on-chain units that still point at that file.
+            The flagship project is real-world asset tokenization: property, allocated gold and
+            silver, and financial lots, each tied to a legal file and a restricted holder book.
           </p>
           <p>
-            Built for originators, funds, vaults, and product teams that need rails they can take
-            through diligence.
+            Built for product teams that need software delivered, and for originators, funds, and
+            vaults that need the RWA register built correctly.
           </p>
         </div>
       </section>

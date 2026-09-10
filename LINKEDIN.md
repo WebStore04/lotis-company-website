@@ -24,11 +24,11 @@ Software Development, Custom Software, Web Applications, Blockchain Software, Sm
 
 **About:**
 ```
-Lotis is a software development company bringing real-world assets into the modern era with blockchain.
+Lotis is a software development company building production systems for the modern internet.
 
-We design and ship production software: products, APIs, and registers. Our flagship project is real-world asset tokenization, built to issue titled property, allocated gold and silver, and other legally backed lots as restricted on-chain units, cut settlement friction, and keep every unit tied to the real file.
+We design and ship web products, APIs, and on-chain software. Teams use Lotis to get real systems into production: customer-facing apps, internal tools, protocol work, and the operational software businesses actually run.
 
-Lotis software is built for originators, funds, vaults, and product teams that need rails they can take through diligence. Property, metals, and financial lots run on the same register. Gold and silver are part of that project.
+Our flagship project is real-world asset tokenization, built to issue titled property, allocated gold and silver, and other legally backed lots as restricted on-chain units, and to keep every unit tied to the real file. It is the lead project. It is not the whole company.
 
-By combining software engineering with blockchain security, Lotis is modernizing how real-world assets move and laying the foundation for digital-first ownership.
+By combining software engineering with blockchain where the problem needs it, Lotis is delivering systems that hold up in production, from product software to digital-first ownership rails.
 ```
