@@ -29,17 +29,9 @@ export function SiteFooter() {
               Contact
             </Link>
           </div>
-          <div className="flex flex-wrap gap-x-5 gap-y-1 text-sm text-zinc-500">
-            <a href={`mailto:${company.email}`} className="hover:text-zinc-200">
-              {company.email}
-            </a>
-            <a href={`mailto:${company.careersEmail}`} className="hover:text-zinc-200">
-              {company.careersEmail}
-            </a>
-            <a href={`mailto:${company.techEmail}`} className="hover:text-zinc-200">
-              {company.techEmail}
-            </a>
-          </div>
+          <a href={`mailto:${company.email}`} className="text-sm text-zinc-500 hover:text-zinc-200">
+            {company.email}
+          </a>
         </div>
       </div>
     </footer>
