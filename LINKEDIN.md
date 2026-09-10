@@ -24,16 +24,11 @@ Software Development, Custom Software, Web Applications, Blockchain Software, Sm
 
 **About:**
 ```
-Lotis is a software development company.
+Lotis is a software development company bringing real-world assets into the modern era with blockchain.
 
-We design and build production software: web products, APIs, registers, and the operational systems teams actually run. We are engineers first. Real-world asset tokenization is our main project, not the name of the firm.
+We design and ship production software: products, APIs, and registers. Our flagship project is real-world asset tokenization, built to issue titled property, allocated gold and silver, and other legally backed lots as restricted on-chain units, cut settlement friction, and keep every unit tied to the real file.
 
-The RWA project issues restricted on-chain units against assets that already have a legal file: titled property, allocated gold and silver, fund interests, and other lots that can be named, vaulted, or recorded. The on-chain unit is the transfer book. It does not replace the deed, the vault, or the custodian.
+Lotis software is built for originators, funds, vaults, and product teams that need rails they can take through diligence. Property, metals, and financial lots run on the same register. Gold and silver are part of that project.
 
-Gold and silver are workstreams inside that project. They are not the company.
-
-Who we work with
-Product teams that need software built, and originators, title desks, vaults, and funds that need the RWA register built correctly.
-
-If you need software, or you are bringing a titled lot on-chain, talk to us.
+By combining software engineering with blockchain security, Lotis is modernizing how real-world assets move and laying the foundation for digital-first ownership.
 ```

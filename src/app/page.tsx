@@ -20,13 +20,14 @@ export default function Home() {
             Software development company
           </p>
           <h1 className="mt-5 max-w-3xl text-4xl leading-[1.1] font-medium tracking-tight text-zinc-50 sm:text-6xl">
-            We write software.
+            Bringing real-world assets
             <br />
-            RWA is the main project.
+            into the modern era.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-8 text-zinc-300">
-            Lotis is a software shop. We build products, APIs, and registers. Our flagship project
-            is real-world asset tokenization: property, allocated gold and silver, and titled lots.
+            Lotis is a software development company. We build products, APIs, and registers. Our
+            flagship project is real-world asset tokenization for property, allocated gold and
+            silver, and titled lots.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button
@@ -49,21 +50,21 @@ export default function Home() {
       <section className="mx-auto grid max-w-6xl gap-10 px-5 py-20 lg:grid-cols-2">
         <div>
           <h2 className="text-2xl tracking-tight text-zinc-50 sm:text-3xl">
-            Not an RWA company that also codes.
+            Software that keeps the asset real.
           </h2>
           <p className="mt-4 leading-7 text-zinc-400">
-            The company is software development. The RWA register is what we are shipping first,
-            the way a protocol team ships one network and still remains a software firm.
+            We write production systems: products, APIs, and the register behind tokenization.
+            Real-world asset software is the project we are shipping first.
           </p>
         </div>
         <div className="space-y-4 leading-7 text-zinc-400">
           <p>
-            Client product work and the RWA project share the same bench: TypeScript, APIs,
-            permissions, and code that has to keep running after launch.
+            Property, allocated gold and silver, and financial lots share one model: a legal file,
+            a restricted holder book, and on-chain units that still point at that file.
           </p>
           <p>
-            We are not a memecoin factory. If a project needs a ticker more than it needs
-            software, it is the wrong fit.
+            Built for originators, funds, vaults, and product teams that need rails they can take
+            through diligence.
           </p>
         </div>
       </section>
