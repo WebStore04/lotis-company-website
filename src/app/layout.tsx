@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Geist, Instrument_Serif } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
@@ -7,6 +7,12 @@ import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+
+const instrument = Instrument_Serif({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-instrument",
 });
 
 export const metadata: Metadata = {
@@ -24,8 +30,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${geistSans.variable} dark h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${instrument.variable} dark h-full scroll-smooth antialiased`}
+    >
       <body className="min-h-full bg-[#07080A] font-sans text-zinc-100">
+        <div className="grain pointer-events-none fixed inset-0 z-[60]" />
         <div className="flex min-h-full flex-col">
           <SiteHeader />
           <main className="flex-1">{children}</main>

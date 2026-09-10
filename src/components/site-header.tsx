@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const links = [
   { href: "/projects", label: "Projects" },
@@ -14,23 +15,44 @@ const links = [
 ];
 
 export function SiteHeader() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const overlay = pathname === "/" && !scrolled && !open;
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 24);
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-[#07080A]/90 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
+    <header
+      className={cn(
+        "fixed inset-x-0 top-0 z-50 transition-colors duration-500",
+        overlay ? "border-b border-transparent bg-transparent" : "border-b border-white/10 bg-[#07080A]/80 backdrop-blur-xl"
+      )}
+    >
+      <div className="mx-auto flex h-[4.25rem] max-w-7xl items-center justify-between px-5 sm:px-8">
         <Link href="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
           <Image
             src="/lotis-logo.png"
             alt="Lotis"
             width={36}
             height={36}
-            className="size-9 rounded-sm"
+            className="size-9 rounded-sm object-cover"
             priority
           />
-          <span className="text-[15px] font-medium tracking-[0.22em] text-zinc-100">
-            LOTIS
-          </span>
+          <span className="text-[13px] font-medium tracking-[0.28em] text-zinc-100">LOTIS</span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -38,17 +60,20 @@ export function SiteHeader() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-zinc-400 transition-colors hover:text-zinc-100"
+              className={cn(
+                "text-[13px] tracking-wide transition-colors",
+                pathname === link.href ? "text-zinc-100" : "text-zinc-400 hover:text-zinc-100"
+              )}
             >
               {link.label}
             </Link>
           ))}
-          <Button
-            render={<Link href="/contact" />}
-            className="h-9 rounded-full bg-[#c4a05a] px-4 text-sm text-[#1a1408] hover:bg-[#d4b36a]"
+          <Link
+            href="/contact"
+            className="inline-flex h-9 items-center rounded-full bg-[#c4a05a] px-4 text-[13px] font-medium text-[#1a1408] transition hover:bg-[#d4b36a]"
           >
             Start a project
-          </Button>
+          </Link>
         </nav>
 
         <button
@@ -62,21 +87,23 @@ export function SiteHeader() {
       </div>
 
       {open ? (
-        <div className="border-t border-white/10 px-5 py-4 md:hidden">
-          <nav className="flex flex-col gap-3">
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="py-1 text-sm text-zinc-300"
-                onClick={() => setOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
+        <div className="fixed inset-0 top-[4.25rem] bg-[#07080A] md:hidden">
+          <nav className="flex h-full flex-col justify-between px-6 py-8">
+            <div className="flex flex-col gap-2">
+              {links.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="font-heading py-2 text-4xl text-zinc-100"
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
             <Link
               href="/contact"
-              className="pt-2 text-sm text-[#c4a05a]"
+              className="inline-flex h-12 items-center justify-center rounded-full bg-[#c4a05a] text-sm font-medium text-[#1a1408]"
               onClick={() => setOpen(false)}
             >
               Start a project

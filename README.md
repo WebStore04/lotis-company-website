@@ -2,7 +2,7 @@
 
 Lotis is a software development company. The flagship project is real-world asset tokenization (property, allocated gold and silver, funds). Gold and silver are workstreams inside that project, not the company.
 
-The public site is a dark engineering page (Parity-style) with an RWA locations index (Propy-style).
+The public site is a cinematic company site: full-viewport photography, autoplaying slides, and motion on every main page.
 
 ## Run locally
 
@@ -15,7 +15,7 @@ Open [http://localhost:4531](http://localhost:4531).
 
 | Path | What it is |
 |---|---|
-| `/` | Company home |
+| `/` | Company home, hero slider, RWA film strip |
 | `/projects` | Software work and the RWA flagship |
 | `/locations` | Jurisdictions for the RWA project |
 | `/approach` | How a Lotis project runs |
