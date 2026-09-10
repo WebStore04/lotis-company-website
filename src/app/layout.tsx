@@ -32,10 +32,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${instrument.variable} dark h-full scroll-smooth antialiased`}
+      className={`${geistSans.variable} ${instrument.variable} dark min-h-full scroll-smooth antialiased`}
     >
       <body className="min-h-full bg-[#07080A] font-sans text-zinc-100">
-        <div className="grain pointer-events-none fixed inset-0 z-[60]" />
+        <div className="grain pointer-events-none fixed inset-0" />
         <div className="flex min-h-full flex-col">
           <SiteHeader />
           <main className="flex-1">{children}</main>

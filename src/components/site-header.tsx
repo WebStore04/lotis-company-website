@@ -38,8 +38,8 @@ export function SiteHeader() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-colors duration-500",
-        overlay ? "border-b border-transparent bg-transparent" : "border-b border-white/10 bg-[#07080A]/80 backdrop-blur-xl"
+        "fixed inset-x-0 top-0 z-[80] transition-colors duration-500",
+        overlay ? "border-b border-transparent bg-transparent" : "border-b border-white/10 bg-[#07080A]/92 backdrop-blur-xl"
       )}
     >
       <div className="mx-auto flex h-[4.25rem] max-w-7xl items-center justify-between px-5 sm:px-8">
