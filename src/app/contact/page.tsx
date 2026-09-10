@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { InquiryForm } from "@/components/inquiry-form";
+import { company } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -18,8 +19,8 @@ export default function ContactPage() {
         </p>
         <p className="mt-6 text-sm text-zinc-500">
           Direct:{" "}
-          <a href="mailto:hello@lotis.dev" className="text-zinc-300 hover:text-[#c4a05a]">
-            hello@lotis.dev
+          <a href={`mailto:${company.email}`} className="text-zinc-300 hover:text-[#c4a05a]">
+            {company.email}
           </a>
         </p>
       </div>

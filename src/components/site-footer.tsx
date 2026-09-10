@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { company } from "@/lib/content";
 
 export function SiteFooter() {
   return (
@@ -10,25 +11,35 @@ export function SiteFooter() {
             Software development company. Flagship project: real-world asset tokenization.
           </p>
         </div>
-        <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-zinc-500">
-          <Link href="/projects" className="hover:text-zinc-200">
-            Projects
-          </Link>
-          <Link href="/locations" className="hover:text-zinc-200">
-            Locations
-          </Link>
-          <Link href="/approach" className="hover:text-zinc-200">
-            Approach
-          </Link>
-          <Link href="/careers" className="hover:text-zinc-200">
-            Careers
-          </Link>
-          <Link href="/contact" className="hover:text-zinc-200">
-            Contact
-          </Link>
-          <a href="mailto:hello@lotis.dev" className="hover:text-zinc-200">
-            hello@lotis.dev
-          </a>
+        <div className="flex flex-col gap-4 sm:items-end">
+          <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-zinc-500">
+            <Link href="/projects" className="hover:text-zinc-200">
+              Projects
+            </Link>
+            <Link href="/locations" className="hover:text-zinc-200">
+              Locations
+            </Link>
+            <Link href="/approach" className="hover:text-zinc-200">
+              Approach
+            </Link>
+            <Link href="/careers" className="hover:text-zinc-200">
+              Careers
+            </Link>
+            <Link href="/contact" className="hover:text-zinc-200">
+              Contact
+            </Link>
+          </div>
+          <div className="flex flex-wrap gap-x-5 gap-y-1 text-sm text-zinc-500">
+            <a href={`mailto:${company.email}`} className="hover:text-zinc-200">
+              {company.email}
+            </a>
+            <a href={`mailto:${company.careersEmail}`} className="hover:text-zinc-200">
+              {company.careersEmail}
+            </a>
+            <a href={`mailto:${company.techEmail}`} className="hover:text-zinc-200">
+              {company.techEmail}
+            </a>
+          </div>
         </div>
       </div>
     </footer>

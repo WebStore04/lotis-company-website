@@ -147,10 +147,10 @@ export default function CareersPage() {
             </a>
             . Tech notes can go to{" "}
             <a
-              href={`mailto:${company.engineeringEmail}`}
+              href={`mailto:${company.techEmail}`}
               className="text-zinc-300 hover:text-[#c4a05a]"
             >
-              {company.engineeringEmail}
+              {company.techEmail}
             </a>
             . Client work still starts on{" "}
             <Link href="/contact" className="text-zinc-300 hover:text-[#c4a05a]">

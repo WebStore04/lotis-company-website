@@ -1,9 +1,9 @@
 export const company = {
   name: "Lotis",
   tagline: "A software development company. Flagship project: real-world asset tokenization.",
-  email: "hello@lotis.dev",
+  email: "hello@lotistoken.com",
   careersEmail: "careers@lotistoken.com",
-  engineeringEmail: "engineering@lotistoken.com",
+  techEmail: "tech@lotistoken.com",
 };
 
 export const careerHighlights = [

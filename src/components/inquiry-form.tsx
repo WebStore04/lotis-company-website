@@ -59,7 +59,7 @@ export function InquiryForm() {
       setMessage("Received. We will reply about the software work or the RWA project.");
     } catch {
       setStatus("error");
-      setMessage("Network error. Email hello@lotis.dev instead.");
+      setMessage("Network error. Email hello@lotistoken.com instead.");
     }
   }
 
