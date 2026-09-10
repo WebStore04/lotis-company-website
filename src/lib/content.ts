@@ -2,7 +2,72 @@ export const company = {
   name: "Lotis",
   tagline: "A software development company. Flagship project: real-world asset tokenization.",
   email: "hello@lotis.dev",
+  careersEmail: "careers@lotistoken.com",
+  engineeringEmail: "engineering@lotistoken.com",
 };
+
+export const careerHighlights = [
+  {
+    title: "Software company first",
+    body: "Lotis is a development shop. Client product work and the RWA register share the same bench.",
+  },
+  {
+    title: "Remote-friendly",
+    body: "Build from where you work best. Headquarters is listed in New York, United States.",
+  },
+  {
+    title: "Flagship: RWA",
+    body: "The lead project is real-world asset tokenization: property, allocated gold and silver, and titled lots.",
+  },
+  {
+    title: "Production systems",
+    body: "Web products, APIs, protocol software, and registers that have to keep running after launch.",
+  },
+] as const;
+
+export const careerWork = [
+  {
+    title: "Product software",
+    body: "Customer-facing apps, internal tools, and APIs. TypeScript and the operational software companies actually run.",
+  },
+  {
+    title: "Protocol and registers",
+    body: "On-chain and off-chain registers, restricted transfers, and the glue between legal files and running code.",
+  },
+  {
+    title: "RWA tokenization",
+    body: "The flagship project. Issue units against property, allocated gold and silver, and financial lots without losing the real file.",
+  },
+  {
+    title: "Developer infrastructure",
+    body: "Tooling, environments, and the unglamorous path from spec to production.",
+  },
+] as const;
+
+export const hiringSteps = [
+  {
+    n: "01",
+    title: "Apply",
+    body: "Send a CV and a short note to careers@lotistoken.com. You hear back either way.",
+  },
+  {
+    n: "02",
+    title: "Intro call",
+    body: "A conversation about the role, how Lotis works, and the project you would join.",
+  },
+  {
+    n: "03",
+    title: "Technical conversation",
+    body: "A structured look at how you build: systems, tradeoffs, and code you can stand behind.",
+  },
+  {
+    n: "04",
+    title: "Decision",
+    body: "A clear yes or no. If we offer, the scope, location, and compensation are written down.",
+  },
+] as const;
+
+export const openRoles: { title: string; location: string }[] = [];
 
 export const services = [
   {

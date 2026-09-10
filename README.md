@@ -19,6 +19,7 @@ Open [http://localhost:4531](http://localhost:4531).
 | `/projects` | Software work and the RWA flagship |
 | `/locations` | Jurisdictions for the RWA project |
 | `/approach` | How a Lotis project runs |
+| `/careers` | Hiring, what you will work on, process |
 | `/contact` | Inquiry form |
 
 The contact form posts to `/api/inquiry`. There is no inbox wired yet. Valid inquiries are logged on the server.

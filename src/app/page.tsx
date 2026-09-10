@@ -163,6 +163,25 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="border-t border-white/10 bg-white/[0.02]">
+        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-16 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-xs tracking-[0.28em] text-[#c4a05a] uppercase">Careers</p>
+            <h2 className="mt-3 text-2xl text-zinc-50 sm:text-3xl">Build production software at Lotis.</h2>
+            <p className="mt-3 max-w-xl text-sm leading-6 text-zinc-400">
+              No open roles right now. We still read notes from engineers who want product work or
+              the RWA project.
+            </p>
+          </div>
+          <Link
+            href="/careers"
+            className="inline-flex h-11 items-center rounded-full border border-white/20 px-6 text-sm text-zinc-100 hover:bg-white/5"
+          >
+            View careers
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }
