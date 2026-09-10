@@ -15,7 +15,8 @@ export default function LocationsPage() {
   return (
     <div>
       <PageHero
-        image="/media/loc-us.png"
+        image="/media/locations-hero.png"
+        video="/media/clip-world.mp4"
         kicker="RWA project"
         title="Browse by where the asset lives."
       >
@@ -43,7 +44,7 @@ export default function LocationsPage() {
         <Reveal className="mt-16 overflow-hidden rounded-[1.6rem] border border-white/10">
           <div className="grid lg:grid-cols-2">
             <div className="relative min-h-[240px]">
-              <Image src="/media/contact-nyc.png" alt="" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+              <Image src="/media/locations-cta.png" alt="" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
             </div>
             <div className="bg-[#0c0d10] p-8 sm:p-12">
               <h2 className="font-heading text-3xl text-zinc-50">We can still help</h2>

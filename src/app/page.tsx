@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { MediaFill } from "@/components/media-fill";
 import { CapabilityMarquee } from "@/components/marquee";
 import { FilmSlider } from "@/components/film-slider";
 import { HeroSlider } from "@/components/hero-slider";
@@ -140,14 +141,18 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="relative min-h-[56svh] overflow-hidden border-y border-white/10">
+        <MediaFill image="/media/lobby-still.jpg" video="/media/clip-lobby.mp4" />
+        <div className="absolute inset-0 bg-[#07080A]/55" />
+        <div className="relative mx-auto flex min-h-[56svh] max-w-7xl items-end px-5 py-16 sm:px-8">
+          <p className="font-heading max-w-2xl text-3xl text-zinc-50 sm:text-5xl">
+            Built in New York. Shipped wherever the file lives.
+          </p>
+        </div>
+      </section>
+
       <section className="relative min-h-[70svh] overflow-hidden">
-        <Image
-          src="/media/careers-atelier.png"
-          alt=""
-          fill
-          sizes="100vw"
-          className="object-cover"
-        />
+        <MediaFill image="/media/home-careers.png" />
         <div className="absolute inset-0 bg-[#07080A]/70" />
         <div className="relative mx-auto flex min-h-[70svh] max-w-7xl flex-col justify-end px-5 py-20 sm:px-8">
           <SectionKicker>Careers</SectionKicker>

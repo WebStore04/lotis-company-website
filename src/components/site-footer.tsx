@@ -15,7 +15,7 @@ export function SiteFooter() {
     <footer className="relative overflow-hidden border-t border-white/10">
       <div className="absolute inset-0">
         <Image
-          src="/media/hero-skyline.png"
+          src="/media/footer-night.png"
           alt=""
           fill
           sizes="100vw"

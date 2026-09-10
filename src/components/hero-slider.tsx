@@ -2,9 +2,55 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { heroSlides } from "@/lib/content";
+
+function SlideMedia({
+  item,
+  active,
+  priority,
+}: {
+  item: (typeof heroSlides)[number];
+  active: boolean;
+  priority: boolean;
+}) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const node = videoRef.current;
+    if (!node) return;
+    if (active) {
+      node.play().catch(() => undefined);
+    } else {
+      node.pause();
+    }
+  }, [active]);
+
+  return (
+    <>
+      <video
+        ref={videoRef}
+        className="absolute inset-0 size-full object-cover motion-reduce:hidden"
+        muted
+        loop
+        playsInline
+        preload={priority ? "auto" : "metadata"}
+        poster={item.image}
+      >
+        <source src={item.video} type="video/mp4" />
+      </video>
+      <Image
+        src={item.image}
+        alt=""
+        fill
+        priority={priority}
+        sizes="100vw"
+        className="hidden object-cover motion-reduce:block"
+      />
+    </>
+  );
+}
 
 const INTERVAL_MS = 6500;
 
@@ -43,14 +89,7 @@ export function HeroSlider() {
             i === index ? "opacity-100" : "opacity-0"
           }`}
         >
-          <Image
-            src={item.image}
-            alt=""
-            fill
-            priority={i === 0}
-            sizes="100vw"
-            className={`object-cover ${i === index ? "animate-kenburns motion-reduce:animate-none" : ""}`}
-          />
+          <SlideMedia item={item} active={i === index} priority={i === 0} />
         </div>
       ))}
 

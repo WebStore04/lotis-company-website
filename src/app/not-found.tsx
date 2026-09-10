@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function NotFound() {
   return (
     <div className="relative flex min-h-[100svh] items-end overflow-hidden">
-      <Image src="/media/hero-skyline.png" alt="" fill sizes="100vw" className="object-cover" />
+      <Image src="/media/notfound-hall.png" alt="" fill sizes="100vw" className="object-cover" />
       <div className="absolute inset-0 bg-[#07080A]/75" />
       <div className="relative mx-auto w-full max-w-7xl px-5 py-28 sm:px-8">
         <p className="text-[11px] tracking-[0.32em] text-[#c4a05a] uppercase">404</p>

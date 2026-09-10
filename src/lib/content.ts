@@ -24,24 +24,28 @@ export const marqueeItems = [
 export const heroSlides = [
   {
     image: "/media/hero-skyline.png",
+    video: "/media/clip-city.mp4",
     kicker: "Software development company",
     title: "Production software for the modern internet.",
     body: "Web products, APIs, and on-chain systems, built to ship and stay up.",
   },
   {
     image: "/media/studio-systems.png",
+    video: "/media/clip-studio.mp4",
     kicker: "What we build",
     title: "Interfaces, data, and the path to production.",
     body: "Client product work and internal tools from the same engineering bench.",
   },
   {
     image: "/media/property-lot.png",
+    video: "/media/clip-architecture.mp4",
     kicker: "Flagship project",
     title: "Real-world assets, on a real register.",
     body: "Tokenization for property, allocated metal, and titled financial lots.",
   },
   {
     image: "/media/gold-vault.png",
+    video: "/media/clip-vault.mp4",
     kicker: "RWA tracks",
     title: "The file stays the source of truth.",
     body: "Title desks and vaults still hold the asset. We write the software around it.",
@@ -71,22 +75,22 @@ export const careerWork = [
   {
     title: "Product software",
     body: "Customer-facing apps, internal tools, and APIs. TypeScript and the operational software companies actually run.",
-    image: "/media/studio-systems.png",
+    image: "/media/careers-product.png",
   },
   {
     title: "Protocol and registers",
     body: "On-chain and off-chain registers, restricted transfers, and the glue between legal files and running code.",
-    image: "/media/protocol-fiber.png",
+    image: "/media/careers-protocol.png",
   },
   {
     title: "RWA tokenization",
     body: "The flagship project. Issue units against property, allocated gold and silver, and financial lots without losing the real file.",
-    image: "/media/property-lot.png",
+    image: "/media/careers-rwa.png",
   },
   {
     title: "Developer infrastructure",
     body: "Tooling, environments, and the unglamorous path from spec to production.",
-    image: "/media/careers-atelier.png",
+    image: "/media/careers-infra.png",
   },
 ] as const;
 
@@ -121,6 +125,7 @@ export const services = [
     title: "Product software",
     kicker: "What we are",
     image: "/media/studio-systems.png",
+    detailImage: "/media/projects-product.png",
     summary:
       "Web products, internal tools, and customer-facing apps. TypeScript, APIs, and the operational software companies actually run.",
     detail:
@@ -131,6 +136,7 @@ export const services = [
     title: "Protocol and register software",
     kicker: "What we are",
     image: "/media/protocol-fiber.png",
+    detailImage: "/media/projects-protocol.png",
     summary:
       "On-chain and off-chain registers, restricted transfers, and the glue between legal files and running code.",
     detail:
@@ -144,6 +150,7 @@ export const rwaTracks = [
     title: "Property",
     kicker: "RWA project",
     image: "/media/property-lot.png",
+    detailImage: "/media/projects-property.png",
     summary:
       "Software that issues units against deeds, leaseholds, and fractional interests. The official record stays the source of title.",
     detail:
@@ -154,6 +161,7 @@ export const rwaTracks = [
     title: "Allocated gold",
     kicker: "RWA project",
     image: "/media/gold-vault.png",
+    detailImage: "/media/projects-gold.png",
     summary:
       "Software for serial-numbered gold lots in custody. A bar list you can audit, not a pooled promise.",
     detail:
@@ -164,6 +172,7 @@ export const rwaTracks = [
     title: "Allocated silver",
     kicker: "RWA project",
     image: "/media/silver-allocated.png",
+    detailImage: "/media/projects-silver.png",
     summary: "The same register used for gold, applied to silver. Allocated bars, not unallocated claims.",
     detail:
       "Custody confirmation, serials, and a restricted holder book. Built as software, not as a metal brand.",
@@ -173,6 +182,7 @@ export const rwaTracks = [
     title: "Credit and funds",
     kicker: "RWA project",
     image: "/media/funds-register.png",
+    detailImage: "/media/projects-funds.png",
     summary:
       "Fund interests, notes, and receivables when there is a true sale, a servicer, and a register of holders.",
     detail:
@@ -224,24 +234,24 @@ export const steps = [
     n: "01",
     title: "Scope the system",
     body: "What has to exist in software, and what must stay in the legal or custody file. We do not blur those.",
-    image: "/media/hero-skyline.png",
+    image: "/media/step-scope.png",
   },
   {
     n: "02",
     title: "Build in production shape",
     body: "Interfaces, data model, permissions, and the unglamorous ops path. Same standard for client software and for RWA.",
-    image: "/media/studio-systems.png",
+    image: "/media/step-build.png",
   },
   {
     n: "03",
     title: "Connect the real file",
     body: "On the RWA project: title, assay, vault, or true sale. If that file is weak, we do not issue a unit.",
-    image: "/media/gold-vault.png",
+    image: "/media/step-file.png",
   },
   {
     n: "04",
     title: "Ship and operate",
     body: "Deploy, report, restrict transfers, and keep the books in sync. Software that a team can still run next year.",
-    image: "/media/protocol-fiber.png",
+    image: "/media/step-ship.png",
   },
 ] as const;

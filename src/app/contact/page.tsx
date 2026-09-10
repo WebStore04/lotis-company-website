@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { InquiryForm } from "@/components/inquiry-form";
+import { MediaFill } from "@/components/media-fill";
 import { company } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -12,7 +12,7 @@ export default function ContactPage() {
   return (
     <div className="grid min-h-[100svh] lg:grid-cols-2">
       <div className="relative hidden min-h-[420px] lg:block">
-        <Image src="/media/contact-nyc.png" alt="" fill sizes="50vw" className="object-cover" />
+        <MediaFill image="/media/contact-nyc.png" video="/media/clip-rain.mp4" priority sizes="50vw" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#07080A] via-[#07080A]/30 to-black/20" />
         <div className="absolute inset-x-0 bottom-0 p-12">
           <p className="text-[11px] tracking-[0.32em] text-[#c4a05a] uppercase">New York</p>
@@ -20,7 +20,7 @@ export default function ContactPage() {
         </div>
       </div>
       <div className="relative h-64 lg:hidden">
-        <Image src="/media/contact-nyc.png" alt="" fill sizes="100vw" className="object-cover" />
+        <MediaFill image="/media/contact-nyc.png" video="/media/clip-rain.mp4" sizes="100vw" />
         <div className="absolute inset-0 bg-[#07080A]/40" />
       </div>
       <div className="flex items-center bg-[#0a0b0e] px-5 py-20 sm:px-10 lg:px-16 lg:py-28">

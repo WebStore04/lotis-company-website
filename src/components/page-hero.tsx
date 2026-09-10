@@ -1,26 +1,26 @@
-import Image from "next/image";
+import { MediaFill } from "@/components/media-fill";
 import { SectionKicker } from "@/components/section-kicker";
 
 export function PageHero({
   image,
+  video,
   kicker,
   title,
   children,
 }: {
   image: string;
+  video?: string;
   kicker: string;
   title: string;
   children?: React.ReactNode;
 }) {
   return (
     <section className="relative isolate min-h-[72svh] overflow-hidden">
-      <Image
-        src={image}
-        alt=""
-        fill
+      <MediaFill
+        image={image}
+        video={video}
         priority
-        sizes="100vw"
-        className="object-cover animate-kenburns motion-reduce:animate-none"
+        className={video ? undefined : "animate-kenburns motion-reduce:animate-none"}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-[#07080A] via-[#07080A]/75 to-[#07080A]/20" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#07080A] via-[#07080A]/30 to-black/25" />

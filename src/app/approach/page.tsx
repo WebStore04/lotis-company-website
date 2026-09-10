@@ -14,7 +14,8 @@ export default function ApproachPage() {
   return (
     <div>
       <PageHero
-        image="/media/protocol-fiber.png"
+        image="/media/approach-hero.png"
+        video="/media/clip-scope.mp4"
         kicker="Approach"
         title="Software with a real file behind it."
       >

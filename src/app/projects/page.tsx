@@ -17,7 +17,8 @@ export default function ProjectsPage() {
   return (
     <div>
       <PageHero
-        image="/media/studio-systems.png"
+        image="/media/projects-hero.png"
+        video="/media/clip-projects.mp4"
         kicker="Projects"
         title="Software first. RWA as the flagship."
       >
@@ -30,7 +31,7 @@ export default function ProjectsPage() {
           <Reveal key={service.slug} delay={i * 0.08}>
             <article id={service.slug} className="scroll-mt-28 grid gap-0 overflow-hidden rounded-[1.75rem] border border-white/10 lg:grid-cols-2">
               <div className={`relative min-h-[280px] lg:min-h-[440px] ${i % 2 === 1 ? "lg:order-2" : ""}`}>
-                <Image src={service.image} alt="" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+                <Image src={service.detailImage} alt="" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
               </div>
               <div className="flex flex-col justify-center bg-[#0c0d10] p-8 sm:p-12">
                 <p className="text-[11px] tracking-[0.28em] text-zinc-500 uppercase">{service.kicker}</p>
@@ -60,7 +61,7 @@ export default function ProjectsPage() {
               label="RWA tracks"
               slides={rwaTracks.map((track) => ({
                 href: `#${track.slug}`,
-                image: track.image,
+                image: track.detailImage,
                 kicker: track.kicker,
                 title: track.title,
                 summary: track.summary,
@@ -75,7 +76,7 @@ export default function ProjectsPage() {
                 className="scroll-mt-28 overflow-hidden rounded-[1.4rem] border border-white/10"
               >
                 <ImageCard
-                  image={track.image}
+                  image={track.detailImage}
                   kicker={track.kicker}
                   title={track.title}
                   body={track.detail}

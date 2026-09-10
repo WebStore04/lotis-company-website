@@ -18,6 +18,7 @@ export default function CareersPage() {
     <div>
       <PageHero
         image="/media/careers-atelier.png"
+        video="/media/clip-careers.mp4"
         kicker="Careers"
         title="Engineers building production software at Lotis."
       >
@@ -63,7 +64,7 @@ export default function CareersPage() {
       </section>
 
       <section className="relative overflow-hidden border-y border-white/10">
-        <Image src="/media/hero-skyline.png" alt="" fill sizes="100vw" className="object-cover opacity-30" />
+        <Image src="/media/careers-why.png" alt="" fill sizes="100vw" className="object-cover opacity-40" />
         <div className="absolute inset-0 bg-[#07080A]/80" />
         <div className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8">
           <SectionKicker>Why Lotis</SectionKicker>
@@ -99,7 +100,7 @@ export default function CareersPage() {
         {openRoles.length === 0 ? (
           <div className="mt-10 overflow-hidden rounded-[1.6rem] border border-white/10">
             <div className="relative min-h-[220px]">
-              <Image src="/media/studio-systems.png" alt="" fill sizes="100vw" className="object-cover" />
+              <Image src="/media/careers-empty.png" alt="" fill sizes="100vw" className="object-cover" />
               <div className="absolute inset-0 bg-[#07080A]/70" />
               <div className="relative flex min-h-[220px] flex-col items-center justify-center px-6 py-16 text-center">
                 <p className="font-heading text-3xl text-zinc-50">No jobs are currently available.</p>
