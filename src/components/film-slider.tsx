@@ -42,7 +42,7 @@ export function FilmSlider({ slides, label }: { slides: readonly FilmSlide[]; la
           {slides.map((item, i) => (
             <div
               key={item.image}
-              className={`absolute inset-0 transition-opacity duration-700 ease-out ${
+              className={`pointer-events-none absolute inset-0 transition-opacity duration-700 ease-out ${
                 i === index ? "opacity-100" : "opacity-0"
               }`}
             >
@@ -55,7 +55,25 @@ export function FilmSlider({ slides, label }: { slides: readonly FilmSlide[]; la
               />
             </div>
           ))}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0c0d10] via-transparent to-black/10 lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-[#0c0d10]" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0c0d10] via-transparent to-black/10 lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-[#0c0d10]" />
+          <div className="absolute inset-x-4 bottom-4 z-10 flex justify-between sm:inset-x-6 sm:bottom-6">
+            <button
+              type="button"
+              aria-label="Previous slide"
+              onClick={() => setIndex((current) => (current - 1 + slides.length) % slides.length)}
+              className="inline-flex size-11 items-center justify-center rounded-full border border-white/20 bg-[#07080A]/70 text-zinc-100 backdrop-blur-sm transition hover:border-[#c4a05a]/50 hover:text-[#c4a05a]"
+            >
+              <ChevronLeft className="size-4" />
+            </button>
+            <button
+              type="button"
+              aria-label="Next slide"
+              onClick={() => setIndex((current) => (current + 1) % slides.length)}
+              className="inline-flex size-11 items-center justify-center rounded-full border border-white/20 bg-[#07080A]/70 text-zinc-100 backdrop-blur-sm transition hover:border-[#c4a05a]/50 hover:text-[#c4a05a]"
+            >
+              <ChevronRight className="size-4" />
+            </button>
+          </div>
         </div>
 
         <div className="relative z-10 flex flex-col justify-between p-6 sm:p-10">

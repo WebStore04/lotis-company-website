@@ -39,7 +39,7 @@ export function HeroSlider() {
       {heroSlides.map((item, i) => (
         <div
           key={item.image}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-out ${
+          className={`pointer-events-none absolute inset-0 transition-opacity duration-1000 ease-out ${
             i === index ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -54,8 +54,8 @@ export function HeroSlider() {
         </div>
       ))}
 
-      <div className="absolute inset-0 bg-gradient-to-r from-[#07080A] via-[#07080A]/70 to-[#07080A]/15" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#07080A] via-[#07080A]/25 to-black/20" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#07080A] via-[#07080A]/70 to-[#07080A]/15" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#07080A] via-[#07080A]/25 to-black/20" />
 
       <div className="relative z-10 flex h-full flex-col justify-end px-5 pb-10 pt-28 sm:px-10 sm:pb-14 lg:px-16">
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
@@ -94,7 +94,7 @@ export function HeroSlider() {
               <button
                 type="button"
                 aria-label="Previous slide"
-                onClick={() => go(index - 1)}
+                onClick={() => setIndex((current) => (current - 1 + heroSlides.length) % heroSlides.length)}
                 className="inline-flex size-11 items-center justify-center rounded-full border border-white/20 text-zinc-100 transition hover:border-[#c4a05a]/60 hover:text-[#c4a05a]"
               >
                 <ChevronLeft className="size-4" />
@@ -102,7 +102,7 @@ export function HeroSlider() {
               <button
                 type="button"
                 aria-label="Next slide"
-                onClick={() => go(index + 1)}
+                onClick={() => setIndex((current) => (current + 1) % heroSlides.length)}
                 className="inline-flex size-11 items-center justify-center rounded-full border border-white/20 text-zinc-100 transition hover:border-[#c4a05a]/60 hover:text-[#c4a05a]"
               >
                 <ChevronRight className="size-4" />
