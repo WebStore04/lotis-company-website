@@ -1,18 +1,21 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { cn } from "@/lib/utils";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
 export function InquiryForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
+  const [invalid, setInvalid] = useState({ name: false, email: false, asset: false });
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    event.stopPropagation();
+
     const form = event.currentTarget;
     const data = new FormData(form);
     const payload = {
@@ -22,7 +25,14 @@ export function InquiryForm() {
       details: String(data.get("details") ?? "").trim(),
     };
 
-    if (!payload.name || !payload.email || !payload.asset) {
+    const nextInvalid = {
+      name: payload.name.length === 0,
+      email: payload.email.length === 0,
+      asset: payload.asset.length === 0,
+    };
+    setInvalid(nextInvalid);
+
+    if (nextInvalid.name || nextInvalid.email || nextInvalid.asset) {
       setStatus("error");
       setMessage("Name, email, and asset class are required.");
       return;
@@ -44,6 +54,7 @@ export function InquiryForm() {
         return;
       }
       form.reset();
+      setInvalid({ name: false, email: false, asset: false });
       setStatus("success");
       setMessage("Received. We will reply to that email with next steps for the lot.");
     } catch {
@@ -53,13 +64,14 @@ export function InquiryForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="space-y-4">
+    <form method="post" action="/api/inquiry" onSubmit={onSubmit} noValidate className="space-y-4">
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="space-y-1.5 text-sm text-zinc-400">
           Name
           <Input
             name="name"
             autoComplete="name"
+            aria-invalid={invalid.name || undefined}
             className="h-11 border-white/15 bg-white/5 text-zinc-100"
             placeholder="Jane Ortiz"
           />
@@ -70,6 +82,7 @@ export function InquiryForm() {
             name="email"
             type="email"
             autoComplete="email"
+            aria-invalid={invalid.email || undefined}
             className="h-11 border-white/15 bg-white/5 text-zinc-100"
             placeholder="jane@originator.com"
           />
@@ -79,6 +92,7 @@ export function InquiryForm() {
         Asset class
         <Input
           name="asset"
+          aria-invalid={invalid.asset || undefined}
           className="h-11 border-white/15 bg-white/5 text-zinc-100"
           placeholder="Property, gold, silver, fund, other"
         />
@@ -98,23 +112,32 @@ export function InquiryForm() {
         </p>
       ) : null}
       {status === "error" ? (
-        <p className="text-sm text-red-400" role="alert">
+        <p
+          className="rounded-lg border border-red-400/40 bg-red-950/40 px-3 py-2 text-sm text-red-300"
+          role="alert"
+        >
           {message}
         </p>
       ) : null}
       {status === "success" ? (
-        <p className="text-sm text-[#c4a05a]" role="status">
+        <p
+          className="rounded-lg border border-[#c4a05a]/40 bg-[#c4a05a]/10 px-3 py-2 text-sm text-[#e4c98a]"
+          role="status"
+        >
           {message}
         </p>
       ) : null}
 
-      <Button
+      <button
         type="submit"
         disabled={status === "submitting"}
-        className="h-11 rounded-full bg-[#c4a05a] px-6 text-[#1a1408] hover:bg-[#d4b36a]"
+        className={cn(
+          "inline-flex h-11 items-center justify-center rounded-full bg-[#c4a05a] px-6 text-sm font-medium text-[#1a1408] transition-colors hover:bg-[#d4b36a]",
+          "disabled:pointer-events-none disabled:opacity-50"
+        )}
       >
         {status === "submitting" ? "Sending…" : "Send inquiry"}
-      </Button>
+      </button>
     </form>
   );
 }
