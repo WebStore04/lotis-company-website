@@ -25,12 +25,6 @@ export default function CareersPage() {
           Lotis is a software development company. We ship products, APIs, and on-chain systems. Our
           flagship project is real-world asset tokenization.
         </p>
-        <a
-          href={`mailto:${company.careersEmail}`}
-          className="mt-8 inline-flex h-12 items-center rounded-full bg-[#c4a05a] px-7 text-sm font-medium text-[#1a1408] hover:bg-[#d4b36a]"
-        >
-          Email {company.careersEmail}
-        </a>
       </PageHero>
 
       <section className="border-b border-white/10 bg-white/[0.02]">
