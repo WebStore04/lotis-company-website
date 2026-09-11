@@ -255,3 +255,73 @@ export const steps = [
     image: "/media/step-ship.png",
   },
 ] as const;
+
+export const culturePillars = [
+  {
+    title: "A culture of technical depth",
+    image: "/media/culture-depth.png",
+    body: "Lotis attracts people who like hard production problems. Product software, protocol work, and the RWA register share one bench. Curiosity, careful reviews, and the freedom to pick a better design over a faster one.",
+  },
+  {
+    title: "Remote by design",
+    image: "/media/culture-remote.png",
+    body: "Headquarters is listed in New York, United States. The work is remote-friendly. We collaborate asynchronously and meet when the project needs a room, not a ritual.",
+  },
+  {
+    title: "Builders of production software",
+    image: "/media/culture-builders.png",
+    body: "We ship systems a team can still operate next year. Web products, APIs, holder books, restricted transfers. The flagship is real-world asset tokenization, sitting on the same bench as the rest of the software.",
+  },
+  {
+    title: "Learning in the work",
+    image: "/media/culture-learning.png",
+    body: "Mentorship and reviews are part of the job. You grow by owning interfaces, data, and the path to production, including the unglamorous ops that keep a register honest.",
+  },
+  {
+    title: "A small, global bench",
+    image: "/media/culture-collective.png",
+    body: "What unites the team is a preference for software that matches the file. Thoughtful debate, written decisions, and the kind of ownership you only get on a small bench.",
+  },
+] as const;
+
+export const cultureVoices = [
+  {
+    image: "/media/culture-quality.png",
+    kicker: "How we work",
+    quote: "People are here for the work, not the pose. Production software has to hold up after launch day.",
+    label: "Engineering",
+  },
+  {
+    image: "/media/culture-product.png",
+    kicker: "How we work",
+    quote: "Build from where you work best. New York is listed. The hours follow the project, not an office badge.",
+    label: "Remote-friendly",
+  },
+  {
+    image: "/media/culture-review.png",
+    kicker: "How we work",
+    quote: "You want to work on something that lasts. A product, a register, a transfer book that still matches the file.",
+    label: "Product and protocol",
+  },
+  {
+    image: "/media/culture-ownership.png",
+    kicker: "How we work",
+    quote: "Curiosity is part of the job. Show the tradeoff. Write it down. Ship the version you can stand behind.",
+    label: "Reviews",
+  },
+] as const;
+
+export const cultureValues = [
+  {
+    title: "Autonomy over hierarchy",
+    body: "Self-directed engineers who own the problem. Decisions follow reasoning and outcomes, not a title on a slide.",
+  },
+  {
+    title: "Think past the ticket",
+    body: "Client products and the RWA register need the same standard: a design that still works when launch week is over. We keep legal files, custody, and software in their own lanes.",
+  },
+  {
+    title: "Learning is the default",
+    body: "New surfaces, new jurisdictions, same standard. We share what we are building, including the parts that are still ugly.",
+  },
+] as const;

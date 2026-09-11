@@ -156,7 +156,11 @@ export default function CareersPage() {
             ))}
           </ol>
           <p className="mt-12 text-sm text-zinc-500">
-            Questions:{" "}
+            How we work:{" "}
+            <Link href="/culture" className="text-zinc-300 hover:text-[#c4a05a]">
+              culture
+            </Link>
+            . Questions:{" "}
             <a href={`mailto:${company.careersEmail}`} className="text-zinc-300 hover:text-[#c4a05a]">
               {company.careersEmail}
             </a>

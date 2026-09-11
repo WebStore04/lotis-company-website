@@ -151,6 +151,20 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="relative min-h-[56svh] overflow-hidden border-b border-white/10">
+        <MediaFill image="/media/culture-counts.png" />
+        <div className="absolute inset-0 bg-[#07080A]/65" />
+        <div className="relative mx-auto flex min-h-[56svh] max-w-7xl flex-col justify-end px-5 py-16 sm:px-8">
+          <SectionKicker>Culture</SectionKicker>
+          <h2 className="font-heading mt-4 max-w-2xl text-4xl text-zinc-50 sm:text-5xl">
+            A company built by engineers, for the systems that have to stay up.
+          </h2>
+          <Link href="/culture" className="mt-8 inline-block text-sm text-zinc-300 hover:text-[#c4a05a]">
+            How we work →
+          </Link>
+        </div>
+      </section>
+
       <section className="relative min-h-[70svh] overflow-hidden">
         <MediaFill image="/media/home-careers.png" />
         <div className="absolute inset-0 bg-[#07080A]/70" />
