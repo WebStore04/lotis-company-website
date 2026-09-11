@@ -152,7 +152,7 @@ export default function Home() {
       </section>
 
       <section className="relative min-h-[56svh] overflow-hidden border-b border-white/10">
-        <MediaFill image="/media/culture-counts.png" />
+        <MediaFill image="/media/culture-counts-walk.png" />
         <div className="absolute inset-0 bg-[#07080A]/50" />
         <div className="relative mx-auto flex min-h-[56svh] max-w-7xl flex-col justify-end px-5 py-16 sm:px-8">
           <SectionKicker>Culture</SectionKicker>

@@ -18,7 +18,7 @@ export default function CulturePage() {
   return (
     <div>
       <PageHero
-        image="/media/culture-hero.png"
+        image="/media/culture-hero-team.png"
         kicker="Culture"
         title="Engineers building production software."
       >
@@ -31,11 +31,11 @@ export default function CulturePage() {
         <Reveal>
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] sm:aspect-[5/4] lg:aspect-[4/5]">
             <Image
-              src="/media/culture-intro.png"
+              src="/media/culture-intro-engineer.png"
               alt="An engineer sketching a system on glass"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
-              className="object-cover"
+              className="object-cover object-[center_20%]"
             />
           </div>
         </Reveal>
@@ -93,7 +93,7 @@ export default function CulturePage() {
       </section>
 
       <section className="relative min-h-[60svh] overflow-hidden">
-        <MediaFill image="/media/culture-counts.png" />
+        <MediaFill image="/media/culture-counts-walk.png" />
         <div className="absolute inset-0 bg-[#07080A]/55" />
         <div className="relative mx-auto flex min-h-[60svh] max-w-7xl flex-col justify-end px-5 py-16 sm:px-8">
           <SectionKicker>Join the team</SectionKicker>
