@@ -8,6 +8,7 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const links = [
+  { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
   { href: "/locations", label: "Locations" },
   { href: "/approach", label: "Approach" },
@@ -19,7 +20,7 @@ export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const overlay = pathname === "/" && !scrolled && !open;
+  const overlay = (pathname === "/" || pathname === "/about") && !scrolled && !open;
 
   useEffect(() => {
     function onScroll() {

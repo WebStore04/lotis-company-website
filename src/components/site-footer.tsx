@@ -3,6 +3,7 @@ import Link from "next/link";
 import { company } from "@/lib/content";
 
 const links = [
+  { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
   { href: "/locations", label: "Locations" },
   { href: "/approach", label: "Approach" },

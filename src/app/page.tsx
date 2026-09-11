@@ -25,7 +25,11 @@ export default function Home() {
         <Reveal delay={0.12} className="space-y-5 self-end text-base leading-8 text-zinc-400">
           <p>
             Lotis builds production systems: web products, APIs, protocol work, and holder books.
-            Client software and the RWA project share the same bench.
+            Client software and the RWA project share the same bench.{" "}
+            <Link href="/about" className="text-zinc-300 hover:text-[#c4a05a]">
+              About Lotis
+            </Link>
+            .
           </p>
           <p>
             The flagship is real-world asset tokenization. Property, allocated gold and silver, and

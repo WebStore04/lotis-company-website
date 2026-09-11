@@ -16,6 +16,7 @@ Open [http://localhost:4531](http://localhost:4531).
 | Path | What it is |
 |---|---|
 | `/` | Company home, hero slider, RWA film strip |
+| `/about` | Who Lotis is: film, kaos collage, reliability, flagship |
 | `/projects` | Software work and the RWA flagship |
 | `/locations` | Jurisdictions for the RWA project |
 | `/approach` | How a Lotis project runs |
