@@ -35,8 +35,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${instrument.variable} dark min-h-full scroll-smooth antialiased`}
     >
       <body className="min-h-full bg-[#07080A] font-sans text-zinc-100">
-        <div className="grain pointer-events-none fixed inset-0" />
-        <div className="flex min-h-full flex-col">
+        <div className="grain pointer-events-none fixed inset-0 z-0" />
+        <div className="relative z-[1] flex min-h-full flex-col">
           <SiteHeader />
           <main className="flex-1">{children}</main>
           <SiteFooter />
