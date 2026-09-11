@@ -6,7 +6,7 @@ import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
 import { SectionKicker } from "@/components/section-kicker";
 import { VoiceSlider } from "@/components/voice-slider";
-import { culturePillars, cultureValues } from "@/lib/content";
+import { cultureBench, culturePillars, cultureValues } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Culture",
@@ -19,7 +19,6 @@ export default function CulturePage() {
     <div>
       <PageHero
         image="/media/culture-hero.png"
-        video="/media/clip-culture.mp4"
         kicker="Culture"
         title="Engineers building production software."
       >
@@ -33,7 +32,7 @@ export default function CulturePage() {
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] sm:aspect-[5/4] lg:aspect-[4/5]">
             <Image
               src="/media/culture-intro.png"
-              alt="Lotis engineers sketching a system on glass"
+              alt="An engineer sketching a system on glass"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover"
@@ -52,6 +51,22 @@ export default function CulturePage() {
         </Reveal>
       </section>
 
+      <section className="mx-auto grid max-w-7xl grid-cols-2 gap-3 px-5 pb-16 sm:px-8 lg:grid-cols-4">
+        {cultureBench.map((shot, i) => (
+          <Reveal key={shot.image} delay={i * 0.04}>
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.4rem]">
+              <Image
+                src={shot.image}
+                alt={shot.alt}
+                fill
+                sizes="(min-width: 1024px) 25vw, 50vw"
+                className="object-cover object-[center_20%]"
+              />
+            </div>
+          </Reveal>
+        ))}
+      </section>
+
       <section className="mx-auto max-w-7xl space-y-8 px-5 pb-24 sm:px-8">
         {culturePillars.map((pillar, i) => (
           <Reveal key={pillar.title} delay={i * 0.04}>
@@ -61,10 +76,10 @@ export default function CulturePage() {
               >
                 <Image
                   src={pillar.image}
-                  alt=""
+                  alt={pillar.alt}
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="object-cover"
+                  className="object-cover object-[center_30%]"
                 />
               </div>
               <div className="flex flex-col justify-center bg-[#0c0d10] p-8 sm:p-12">
@@ -79,7 +94,7 @@ export default function CulturePage() {
 
       <section className="relative min-h-[60svh] overflow-hidden">
         <MediaFill image="/media/culture-counts.png" />
-        <div className="absolute inset-0 bg-[#07080A]/70" />
+        <div className="absolute inset-0 bg-[#07080A]/55" />
         <div className="relative mx-auto flex min-h-[60svh] max-w-7xl flex-col justify-end px-5 py-16 sm:px-8">
           <SectionKicker>Join the team</SectionKicker>
           <h2 className="font-heading mt-4 max-w-2xl text-4xl text-zinc-50 sm:text-5xl">

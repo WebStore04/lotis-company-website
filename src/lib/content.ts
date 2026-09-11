@@ -256,55 +256,83 @@ export const steps = [
   },
 ] as const;
 
+export const cultureBench = [
+  {
+    image: "/media/culture-person-window.png",
+    alt: "An engineer looking out over the city from a loft window",
+  },
+  {
+    image: "/media/culture-person-hall.png",
+    alt: "Two colleagues talking in a studio hallway",
+  },
+  {
+    image: "/media/culture-person-eng.png",
+    alt: "An engineer pausing during a review",
+  },
+  {
+    image: "/media/culture-person-remote.png",
+    alt: "An engineer working from a sunlit apartment",
+  },
+] as const;
+
 export const culturePillars = [
   {
     title: "A culture of technical depth",
     image: "/media/culture-depth.png",
+    alt: "An engineer working late at a dual-monitor desk",
     body: "Lotis attracts people who like hard production problems. Product software, protocol work, and the RWA register share one bench. Curiosity, careful reviews, and the freedom to pick a better design over a faster one.",
   },
   {
     title: "Remote by design",
     image: "/media/culture-remote.png",
+    alt: "An engineer on a morning call from a home kitchen table",
     body: "Headquarters is listed in New York, United States. The work is remote-friendly. We collaborate asynchronously and meet when the project needs a room, not a ritual.",
   },
   {
     title: "Builders of production software",
     image: "/media/culture-builders.png",
+    alt: "Two engineers pairing at a shared desk",
     body: "We ship systems a team can still operate next year. Web products, APIs, holder books, restricted transfers. The flagship is real-world asset tokenization, sitting on the same bench as the rest of the software.",
   },
   {
     title: "Learning in the work",
     image: "/media/culture-learning.png",
+    alt: "Two engineers reviewing work together at a table",
     body: "Mentorship and reviews are part of the job. You grow by owning interfaces, data, and the path to production, including the unglamorous ops that keep a register honest.",
   },
   {
     title: "A small, global bench",
     image: "/media/culture-collective.png",
+    alt: "A small team talking around a loft table at night",
     body: "What unites the team is a preference for software that matches the file. Thoughtful debate, written decisions, and the kind of ownership you only get on a small bench.",
   },
 ] as const;
 
 export const cultureVoices = [
   {
-    image: "/media/culture-quality.png",
+    image: "/media/culture-person-eng.png",
+    alt: "Engineer in the studio",
     kicker: "How we work",
     quote: "People are here for the work, not the pose. Production software has to hold up after launch day.",
     label: "Engineering",
   },
   {
-    image: "/media/culture-product.png",
+    image: "/media/culture-person-remote.png",
+    alt: "Engineer working remotely",
     kicker: "How we work",
     quote: "Build from where you work best. New York is listed. The hours follow the project, not an office badge.",
     label: "Remote-friendly",
   },
   {
-    image: "/media/culture-review.png",
+    image: "/media/culture-person-product.png",
+    alt: "Engineer with product sketches",
     kicker: "How we work",
     quote: "You want to work on something that lasts. A product, a register, a transfer book that still matches the file.",
     label: "Product and protocol",
   },
   {
-    image: "/media/culture-ownership.png",
+    image: "/media/culture-person-review.png",
+    alt: "Engineer during a review",
     kicker: "How we work",
     quote: "Curiosity is part of the job. Show the tradeoff. Write it down. Ship the version you can stand behind.",
     label: "Reviews",

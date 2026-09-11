@@ -41,7 +41,13 @@ export function VoiceSlider() {
                 i === index ? "opacity-100" : "opacity-0"
               }`}
             >
-              <Image src={item.image} alt="" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+              <Image
+                src={item.image}
+                alt={item.alt}
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover object-[center_20%]"
+              />
             </div>
           ))}
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0c0d10] via-transparent to-black/20 lg:bg-gradient-to-r lg:from-transparent lg:to-[#0c0d10]" />
