@@ -22,15 +22,13 @@ export function AboutHero() {
     <section className="relative isolate min-h-[100svh] overflow-hidden">
       <MediaFill
         image="/media/about-hero.png"
-        video="/media/clip-about.mp4"
         priority
-        className="animate-breathe motion-reduce:animate-none"
       />
       <div className="pointer-events-none absolute -right-[8%] top-[18%] hidden h-[38%] w-[32%] overflow-hidden rounded-[1.4rem] border border-white/15 shadow-2xl lg:block">
-        <MediaFill image="/media/about-street.png" video="/media/clip-about-street.mp4" className="animate-film-jitter" />
+        <MediaFill image="/media/about-street.png" />
       </div>
       <div className="pointer-events-none absolute -left-[6%] bottom-[12%] hidden h-[32%] w-[28%] overflow-hidden rounded-[1.4rem] border border-white/15 shadow-2xl md:block">
-        <MediaFill image="/media/about-reliability.png" video="/media/clip-about-reli.mp4" />
+        <MediaFill image="/media/about-reliability.png" />
       </div>
       <div className="absolute inset-0 bg-gradient-to-r from-[#07080A] via-[#07080A]/80 to-[#07080A]/25" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#07080A] via-[#07080A]/35 to-black/30" />

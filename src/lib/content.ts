@@ -357,38 +357,32 @@ export const cultureValues = [
 export const aboutKaos = [
   {
     image: "/media/about-hero.png",
-    video: "/media/clip-about.mp4",
-    className: "left-[4%] top-[8%] w-[42%] animate-drift",
+    className: "left-[4%] top-[8%] w-[42%]",
     tilt: "-7deg",
   },
   {
     image: "/media/about-reliability.png",
-    video: "/media/clip-about-reli.mp4",
-    className: "right-[6%] top-[2%] w-[36%] animate-drift-alt",
+    className: "right-[6%] top-[2%] w-[36%]",
     tilt: "8deg",
   },
   {
     image: "/media/about-file.png",
-    video: "/media/clip-about-file.mp4",
-    className: "left-[28%] top-[38%] w-[34%] animate-drift-slow",
+    className: "left-[28%] top-[38%] w-[34%]",
     tilt: "3deg",
   },
   {
     image: "/media/about-gathering.png",
-    video: "/media/clip-about-gather.mp4",
-    className: "right-[8%] top-[42%] w-[40%] animate-drift",
+    className: "right-[8%] top-[42%] w-[40%]",
     tilt: "-5deg",
   },
   {
     image: "/media/about-street.png",
-    video: "/media/clip-about-street.mp4",
-    className: "left-[6%] bottom-[4%] w-[30%] animate-drift-alt",
+    className: "left-[6%] bottom-[4%] w-[30%]",
     tilt: "6deg",
   },
   {
     image: "/media/about-systems.png",
-    video: "/media/clip-about-systems.mp4",
-    className: "right-[32%] bottom-[2%] w-[28%] animate-drift-slow",
+    className: "right-[32%] bottom-[2%] w-[28%]",
     tilt: "-9deg",
   },
 ] as const;
@@ -398,18 +392,15 @@ export const aboutTracks = [
     title: "Product software",
     body: "Web products, internal tools, APIs. The operational software a team can still run next year.",
     image: "/media/about-focus.png",
-    video: "/media/clip-about-focus.mp4",
   },
   {
     title: "Protocol and registers",
     body: "Restricted transfers, holder books, and the glue between a legal file and running code.",
     image: "/media/about-systems.png",
-    video: "/media/clip-about-systems.mp4",
   },
   {
     title: "RWA flagship",
     body: "Property, allocated gold and silver, titled lots. The chain is the transfer book. The file stays the source of truth.",
     image: "/media/about-file.png",
-    video: "/media/clip-about-file.mp4",
   },
 ] as const;

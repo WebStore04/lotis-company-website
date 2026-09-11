@@ -197,48 +197,6 @@
   animation: slide-progress 6.5s linear forwards;
 }
 
-@keyframes drift {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0) rotate(var(--tilt, -6deg));
-  }
-  50% {
-    transform: translate3d(18px, -22px, 0) rotate(calc(var(--tilt, -6deg) + 4deg));
-  }
-}
-
-@keyframes drift-alt {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0) rotate(var(--tilt, 6deg));
-  }
-  50% {
-    transform: translate3d(-16px, 20px, 0) rotate(calc(var(--tilt, 6deg) - 5deg));
-  }
-}
-
-@keyframes drift-slow {
-  0%,
-  100% {
-    transform: translate3d(0, 8px, 0) rotate(var(--tilt, 2deg));
-  }
-  50% {
-    transform: translate3d(10px, -14px, 0) rotate(calc(var(--tilt, 2deg) + 3deg));
-  }
-}
-
-.animate-drift {
-  animation: drift 11s ease-in-out infinite;
-}
-
-.animate-drift-alt {
-  animation: drift-alt 13s ease-in-out infinite;
-}
-
-.animate-drift-slow {
-  animation: drift-slow 16s ease-in-out infinite;
-}
-
 @keyframes marquee-reverse {
   from {
     transform: translateX(-50%);
@@ -281,50 +239,14 @@
   animation: about-word 1.05s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-@keyframes breathe {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.06);
-  }
-}
-
-.animate-breathe {
-  animation: breathe 18s ease-in-out infinite;
-}
-
-@keyframes film-jitter {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-  25% {
-    transform: translate3d(1px, -1px, 0);
-  }
-  75% {
-    transform: translate3d(-1px, 1px, 0);
-  }
-}
-
-.animate-film-jitter {
-  animation: film-jitter 0.35s steps(2) infinite;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .animate-kenburns,
   .animate-marquee,
   .animate-marquee-reverse,
   .animate-slide-progress,
   .reveal-up,
-  .animate-drift,
-  .animate-drift-alt,
-  .animate-drift-slow,
   .animate-ticker-y,
-  .about-word,
-  .animate-breathe,
-  .animate-film-jitter {
+  .about-word {
     animation: none !important;
     filter: none !important;
   }

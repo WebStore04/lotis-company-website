@@ -1,7 +1,6 @@
 import { MediaFill } from "@/components/media-fill";
 import { aboutKaos } from "@/lib/content";
 import { cn } from "@/lib/utils";
-import type { CSSProperties } from "react";
 
 export function AboutKaos() {
   return (
@@ -12,8 +11,8 @@ export function AboutKaos() {
 
       <div className="grid grid-cols-2 gap-3 px-5 sm:hidden">
         {aboutKaos.map((tile) => (
-          <div key={tile.video} className="relative aspect-[4/5] overflow-hidden rounded-[1.2rem]">
-            <MediaFill image={tile.image} video={tile.video} sizes="50vw" />
+          <div key={tile.image} className="relative aspect-[4/5] overflow-hidden rounded-[1.2rem]">
+            <MediaFill image={tile.image} sizes="50vw" />
           </div>
         ))}
       </div>
@@ -21,14 +20,14 @@ export function AboutKaos() {
       <div className="relative mx-auto hidden h-[78vh] max-w-7xl sm:block">
         {aboutKaos.map((tile) => (
           <div
-            key={tile.video}
+            key={tile.image}
             className={cn(
               "pointer-events-none absolute aspect-[16/10] overflow-hidden rounded-[1.35rem] border border-white/15 shadow-[0_30px_80px_rgba(0,0,0,0.55)]",
               tile.className
             )}
-            style={{ "--tilt": tile.tilt } as CSSProperties}
+            style={{ transform: `rotate(${tile.tilt})` }}
           >
-            <MediaFill image={tile.image} video={tile.video} sizes="40vw" />
+            <MediaFill image={tile.image} sizes="40vw" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" />
           </div>
         ))}

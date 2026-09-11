@@ -53,11 +53,7 @@ export default function AboutPage() {
       <AboutKaos />
 
       <section className="relative min-h-[72svh] overflow-hidden">
-        <MediaFill
-          image="/media/about-gathering.png"
-          video="/media/clip-about-gather.mp4"
-          className="animate-kenburns motion-reduce:animate-none"
-        />
+        <MediaFill image="/media/about-gathering.png" />
         <div className="absolute inset-0 bg-[#07080A]/55" />
         <div className="relative mx-auto flex min-h-[72svh] max-w-7xl flex-col justify-end px-5 py-16 sm:px-8">
           <SectionKicker>The bench</SectionKicker>
@@ -74,7 +70,7 @@ export default function AboutPage() {
       <section className="mx-auto grid max-w-7xl overflow-hidden px-5 py-16 sm:px-8 lg:grid-cols-2 lg:py-24">
         <Reveal>
           <div className="relative min-h-[320px] overflow-hidden rounded-[1.75rem] lg:min-h-[520px] lg:rounded-r-none">
-            <MediaFill image="/media/about-reliability.png" video="/media/clip-about-reli.mp4" />
+            <MediaFill image="/media/about-reliability.png" />
           </div>
         </Reveal>
         <Reveal delay={0.08} className="flex flex-col justify-center rounded-[1.75rem] border border-white/10 bg-[#0c0d10] p-8 sm:p-12 lg:rounded-l-none lg:border-l-0">
@@ -103,7 +99,7 @@ export default function AboutPage() {
           </p>
         </Reveal>
         <Reveal delay={0.08} className="relative min-h-[320px] overflow-hidden rounded-[1.75rem] lg:order-2 lg:min-h-[520px] lg:rounded-l-none">
-          <MediaFill image="/media/about-file.png" video="/media/clip-about-file.mp4" />
+          <MediaFill image="/media/about-file.png" />
         </Reveal>
       </section>
 
@@ -119,7 +115,7 @@ export default function AboutPage() {
             {aboutTracks.map((track, i) => (
               <Reveal key={track.title} delay={i * 0.06}>
                 <article className="group relative min-h-[420px] overflow-hidden rounded-[1.6rem] border border-white/10">
-                  <MediaFill image={track.image} video={track.video} sizes="(min-width: 1024px) 33vw, 100vw" />
+                  <MediaFill image={track.image} sizes="(min-width: 1024px) 33vw, 100vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#07080A] via-[#07080A]/50 to-black/10" />
                   <div className="relative flex h-full min-h-[420px] flex-col justify-end p-6">
                     <h3 className="font-heading text-2xl text-zinc-50">{track.title}</h3>
@@ -178,14 +174,14 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.08}>
             <div className="relative min-h-[340px] overflow-hidden rounded-[1.75rem] lg:min-h-[440px]">
-              <MediaFill image="/media/about-street.png" video="/media/clip-about-street.mp4" />
+              <MediaFill image="/media/about-street.png" />
             </div>
           </Reveal>
         </div>
       </section>
 
       <section className="relative min-h-[56svh] overflow-hidden">
-        <MediaFill image="/media/about-systems.png" video="/media/clip-about-systems.mp4" />
+        <MediaFill image="/media/about-systems.png" />
         <div className="absolute inset-0 bg-[#07080A]/60" />
         <div className="relative mx-auto flex min-h-[56svh] max-w-7xl flex-col justify-end px-5 py-16 sm:px-8">
           <p className="font-heading max-w-3xl text-3xl text-zinc-50 sm:text-5xl">
