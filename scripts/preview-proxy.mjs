@@ -34,13 +34,14 @@ const server = http.createServer((req, res) => {
   headers.host = `${TARGET_HOST}:${TARGET_PORT}`;
   delete headers["accept-encoding"];
   headers.connection = "close";
+  const method = req.method === "HEAD" ? "GET" : req.method;
 
   const upstream = http.request(
     {
       hostname: TARGET_HOST,
       port: TARGET_PORT,
       path: req.url,
-      method: req.method,
+      method,
       headers,
     },
     (incoming) => {
@@ -58,6 +59,10 @@ const server = http.createServer((req, res) => {
         out["content-length"] = String(body.length);
         out.connection = "close";
         res.writeHead(incoming.statusCode || 200, out);
+        if (req.method === "HEAD") {
+          res.end();
+          return;
+        }
         res.end(body);
       });
     },
