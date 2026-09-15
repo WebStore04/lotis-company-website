@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:4531](http://localhost:4531).
+Open [http://localhost:4531](http://localhost:4531). The dev script fronts Next.js with a small proxy so Preview (and other HTTP tunnels) get complete `Content-Length` responses instead of chunked keep-alive streams.
 
 | Path | What it is |
 |---|---|
