@@ -117,7 +117,14 @@ export const hiringSteps = [
   },
 ] as const;
 
-export const openRoles: { title: string; location: string }[] = [];
+export const openRoles = [
+  {
+    title: "Senior Blockchain Developer",
+    department: "Engineering",
+    location: "Remote-friendly, New York listed",
+    href: "https://lotistoken.notion.site/Senior-Blockchain-Developer-3dc7049a82818070a7c3c3144d8a6087",
+  },
+] as const;
 
 export const services = [
   {

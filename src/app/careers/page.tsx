@@ -95,8 +95,13 @@ export default function CareersPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
-        <SectionKicker>Open roles</SectionKicker>
-        <h2 className="font-heading mt-4 text-4xl text-zinc-50">Current openings</h2>
+        <Reveal>
+          <SectionKicker>Open roles</SectionKicker>
+          <h2 className="font-heading mt-4 text-4xl text-zinc-50 sm:text-5xl">Join the Collective</h2>
+          <p className="mt-4 max-w-2xl text-sm leading-6 text-zinc-400">
+            Production software on the Lotis bench, including protocol work on the RWA register.
+          </p>
+        </Reveal>
         {openRoles.length === 0 ? (
           <div className="mt-10 overflow-hidden rounded-[1.6rem] border border-white/10">
             <div className="relative min-h-[220px]">
@@ -116,25 +121,48 @@ export default function CareersPage() {
             </div>
           </div>
         ) : (
-          <ul className="mt-8 divide-y divide-white/10 rounded-2xl border border-white/10">
-            {openRoles.map((role) => (
-              <li
-                key={role.title}
-                className="flex flex-col gap-2 px-6 py-5 sm:flex-row sm:items-center sm:justify-between"
-              >
-                <div>
-                  <p className="text-zinc-50">{role.title}</p>
-                  <p className="text-sm text-zinc-500">{role.location}</p>
-                </div>
-                <a
-                  href={`mailto:${company.careersEmail}?subject=${encodeURIComponent(role.title)}`}
-                  className="text-sm text-[#c4a05a] hover:underline"
-                >
-                  Apply
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div className="mt-10 overflow-x-auto rounded-[1.6rem] border border-white/10">
+            <table className="w-full min-w-[640px] text-left">
+              <thead>
+                <tr className="border-b border-white/10 bg-white/[0.03] text-[11px] tracking-[0.22em] text-zinc-500 uppercase">
+                  <th className="px-6 py-4 font-medium">Role</th>
+                  <th className="px-6 py-4 font-medium">Department</th>
+                  <th className="px-6 py-4 font-medium">Location</th>
+                  <th className="px-6 py-4 font-medium">
+                    <span className="sr-only">View</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {openRoles.map((role) => (
+                  <tr key={role.title} className="border-b border-white/10 last:border-b-0">
+                    <td className="px-6 py-5">
+                      <a
+                        href={role.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-base text-zinc-50 transition hover:text-[#c4a05a]"
+                      >
+                        {role.title}
+                      </a>
+                    </td>
+                    <td className="px-6 py-5 text-sm text-zinc-400">{role.department}</td>
+                    <td className="px-6 py-5 text-sm text-zinc-400">{role.location}</td>
+                    <td className="px-6 py-5 text-right">
+                      <a
+                        href={role.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex h-10 items-center rounded-full bg-[#c4a05a] px-5 text-sm font-medium text-[#1a1408] hover:bg-[#d4b36a]"
+                      >
+                        View
+                      </a>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         )}
       </section>
 

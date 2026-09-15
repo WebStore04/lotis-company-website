@@ -178,8 +178,8 @@ export default function Home() {
             Build production software at Lotis.
           </h2>
           <p className="mt-4 max-w-xl text-sm leading-7 text-zinc-300 sm:text-base">
-            No open roles right now. We still read notes from engineers who want product work or
-            the RWA project.
+            Open role: Senior Blockchain Developer. We also read notes from engineers who want
+            product work or the RWA project.
           </p>
           <Link
             href="/careers"
