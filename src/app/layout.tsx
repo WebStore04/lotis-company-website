@@ -23,8 +23,11 @@ export const metadata: Metadata = {
   description:
     "Lotis is a software development company. Flagship project: real-world asset tokenization for property, gold, and silver.",
   icons: {
-    icon: "/lotis-logo.png",
-    apple: "/lotis-logo.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/lotis-favicon.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
   },
 };
 
