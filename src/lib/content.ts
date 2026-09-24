@@ -4,6 +4,11 @@ export const company = {
   email: "hello@lotistoken.com",
   careersEmail: "careers@lotistoken.com",
   techEmail: "tech@lotistoken.com",
+  social: [
+    { label: "LinkedIn", href: "https://www.linkedin.com/company/lotistoken" },
+    { label: "X", href: "https://x.com/lotistoken" },
+    { label: "Instagram", href: "https://www.instagram.com/lotistoken" },
+  ],
 };
 
 export const marqueeItems = [

@@ -44,6 +44,19 @@ export function SiteFooter() {
                 </Link>
               ))}
             </div>
+            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-zinc-400 sm:justify-end">
+              {company.social.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition hover:text-zinc-100"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
             <a
               href={`mailto:${company.email}`}
               className="text-sm text-zinc-300 transition hover:text-[#c4a05a]"
